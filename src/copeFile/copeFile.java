@@ -62,7 +62,9 @@ public class copeFile {
         	}else{
         		//String name = array[i].getName();
             	//System.out.println(name);
+        		//获取文件自根目录以后的目录
             	String name = array[i].getPath().substring(src.length(),array[i].getPath().length());
+            	//获取文件格式，不包括点
             	String fileType = name.substring(name.lastIndexOf(".", name.length()));
             	if(fileType.toLowerCase().equals(("."+format).toLowerCase())){
             		String from = array[i].getPath();
